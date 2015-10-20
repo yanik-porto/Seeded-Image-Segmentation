@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButton_extract_clicked();
 
+    void on_pushButton_draw_clicked();
+
 private:
     Ui::MainWindow *ui;
 

@@ -21,6 +21,8 @@ public:
 
     void setPhoto(const QString &);
     QPixmap getDrawing()const;
+    void setDrawEnable(const bool &);
+    bool isDrawEnabled() const;
 
     void paintEvent(QPaintEvent *);
     void mousePressEvent(QMouseEvent *);
@@ -36,7 +38,9 @@ private:
     QPoint p2;
     QPixmap *photo;
     QPixmap *drawing;
-    bool mousePressed;
+    bool leftMousePressed;
+    bool rightMousePressed;
+    bool drawEnabled;
 
 };
 

@@ -26,4 +26,4 @@ FORMS    += mainwindow.ui
 #LIBS += -lopencv_core2411 -lopencv_highgui2411 -lopencv_imgproc2411
 
 RESOURCES += \
-    photos.qrc
+    icons.qrc

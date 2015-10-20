@@ -29,3 +29,10 @@ void MainWindow::on_pushButton_extract_clicked()
     ui->label_drawing->setGeometry(500,30,extPix.width(),extPix.height());
     ui->label_drawing->setPixmap(ui->label_image->getDrawing());
 }
+
+void MainWindow::on_pushButton_draw_clicked()
+{
+    bool draw=ui->label_image->isDrawEnabled();
+    ui->label_image->setDrawEnable(!draw);
+
+}

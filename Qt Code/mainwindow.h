@@ -2,8 +2,20 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "imglabel.h"
+#include <iostream>
 #include <QFileDialog>
+#include <QBuffer>
+
+#include "imglabel.h"
+#include "engine.h"
+
+#include "opencv2/core/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv/cv.h"
+
+using namespace cv;
+using namespace std;
+
 
 namespace Ui {
 class MainWindow;
@@ -26,7 +38,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-
+    Engine matrixEngine;
 };
 
 #endif // MAINWINDOW_H

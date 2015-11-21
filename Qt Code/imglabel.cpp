@@ -19,7 +19,7 @@ imgLabel::imgLabel(const QString &filename, QWidget *parent):
     this->setPixmap(*photo);
     drawing=new QPixmap(photo->size());
     //drawing.scaled(this->size());
-    drawing->fill(Qt::white);
+    drawing->fill(Qt::black);
 }
 
 imgLabel::~imgLabel()
@@ -34,19 +34,20 @@ void imgLabel::setPhoto(const QString &filename)
 {
     if(photo)
     {
-        delete photo;
-        delete drawing;
+        //delete photo;
+        //delete drawing;
     }
 
     //this->setGeometry(this->x(),this->y(),0,0);
     photo=new QPixmap(filename);
+    //photo->scaled(this->size(),Qt::KeepAspectRatio);
     this->setGeometry(this->x(),this->y(),photo->width(),photo->height());
     this->setPixmap(*photo);
     //this->setGeometry(30,30,photo->width(),photo->height());
 
     drawing=new QPixmap(photo->size());
     cout<<photo->width()<<"   "<<photo->height()<<endl;
-    drawing->fill(Qt::white);
+    drawing->fill(Qt::black);
     cout<<drawing->width()<<"   "<<drawing->height()<<endl;
 
 

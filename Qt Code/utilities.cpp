@@ -1,13 +1,15 @@
 #include "utilities.h"
+#include <QtDebug>
 
 //-----------------------------------------------------------------------------
 // Functions
 //-----------------------------------------------------------------------------
 
-double maxInfNormInNeighood(MatrixXi M, int indexRow, int indexCol)
+float maxInfNormInNeighood(MatrixXi M, int indexRow, int indexCol)
 {
     int rowPj, colPj;
-    double maxInfNorm(0), infNorm(0);
+    int index=indexRow*M.cols()+indexCol;
+    float maxInfNorm(0), infNorm(0);
 
     for(int i = 0; i < 9; i++)
     {
@@ -18,10 +20,12 @@ double maxInfNormInNeighood(MatrixXi M, int indexRow, int indexCol)
         {}
         else
         {
-            infNorm = abs(M(indexRow, indexCol) - M(rowPj, colPj));                //m.lpNorm<Infinity>()
+            infNorm = float(abs(M(indexRow, indexCol) - M(rowPj, colPj)));                //m.lpNorm<Infinity>()
 
             if(infNorm > maxInfNorm)
                 maxInfNorm = infNorm;
+
+            //qDebug()<<"maxinfNorm :"<<maxInfNorm;
         }
 
     }

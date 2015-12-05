@@ -36,6 +36,8 @@ private slots:
 
     void on_pushButton_draw_clicked();
 
+    void on_pushButton_Result_clicked();
+
 private:
     Ui::MainWindow *ui;
     Engine matrixEngine;

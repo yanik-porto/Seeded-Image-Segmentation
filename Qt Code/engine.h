@@ -5,15 +5,16 @@
 #include <QPixmap>
 #include <iostream>
 #include "utilities.h"
+#include <time.h>
 
-#include "opencv2/core/core.hpp"
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/core/eigen.hpp"
-#include "opencv/cv.h"
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/core/eigen.hpp>
+#include <opencv/cv.h>
+#include <opencv2/imgproc/imgproc.hpp>
 
-#include <Eigen/Dense>
-#include <Eigen/Core>
-#include <Eigen/Sparse>
+#include "Eigen/Dense"
+#include "Eigen/Core"
+#include "Eigen/Sparse"
 
 using namespace cv;
 using namespace std;
@@ -32,19 +33,29 @@ public:
     void implement_I();
     void implement_b();
     void implement_Wij();
-    void implement_D();
     void implement_Is();
+    void implement_L();
+    void implement_X();
+    void convert_X_to_image();
+    Mat &get_seg_image();
 
 
 
 private:
     QString picturePath;
-    MatrixXi I;
+    MatrixXd I;
+    Mat grayI;
     QPixmap pixmap_b;
-    MatrixXi b;
+    MatrixXd bMatrix;
+    VectorXd b;
     SparseMatrix<double> Wij;
     SparseMatrix<double> D;
     SparseMatrix<double> Is;
+    SparseMatrix<double> L;
+    VectorXd X;
+    SparseMatrix<double> A;
+    MatrixXd xMatrix;
+    Mat seg_image;
 
 
     //Size size_image;

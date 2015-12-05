@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -135,6 +135,13 @@
          <property name="icon">
           <iconset resource="icons.qrc">
            <normaloff>:/MyIcons/png/photo24.png</normaloff>:/MyIcons/png/photo24.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_Result">
+         <property name="text">
+          <string>Show Result</string>
          </property>
         </widget>
        </item>

@@ -9,6 +9,6 @@ using namespace Eigen;
  * The Utilities file contains some commom use functions.
  */
 
-double maxInfNormInNeighood(MatrixXi M, int indexRow, int indexCol);
+float maxInfNormInNeighood(MatrixXi M, int indexRow, int indexCol);
 
 #endif // UTILITIES_H

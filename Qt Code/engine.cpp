@@ -21,14 +21,22 @@ void Engine::set_picturePath(const QString filename)
 
 void Engine::implement_I()
 {
-    Mat matImage = imread(picturePath.toStdString());
-    grayI = Mat(matImage.size(), CV_8U);
-    cv::cvtColor(matImage,grayI,CV_BGR2GRAY);
-    grayI.convertTo(grayI,CV_32F,1/255.0);         //Change to CV_32FC3 for color image
+    //Mat matImage = imread(picturePath.toStdString());
+    //grayI = Mat(matImage.size(), CV_8U);
+    //cv::cvtColor(matImage,grayI,CV_BGR2GRAY);
+    //grayI.convertTo(grayI,CV_32F,1/255.0);         //Change to CV_32FC3 for color image
 
-    cv2eigen(grayI,I);
+    //cv2eigen(grayI,I);
+
+    Icv = imread(picturePath.toStdString(),CV_LOAD_IMAGE_COLOR);
+    Mat bgr[3];
+    split(Icv,bgr);
+    cv2eigen(bgr[0],Ib);
+    cv2eigen(bgr[1],Ig);
+    cv2eigen(bgr[2],Ir);
     //cout<<I<<endl;
-    cout<<"Size of I: "<<I.rows()<<I.cols()<<endl;
+    cout<<"Size of I: "<<Ib.rows()<< " " <<Ib.cols()<<endl;
+
     cout<<"I:OK"<<endl;
 }
 
@@ -64,13 +72,16 @@ void Engine::implement_b()
 
 void Engine::implement_Wij()
 {
-    const int row = I.rows();
-    const int col = I.cols();
+    const int row = Ib.rows();
+    const int col = Ib.cols();
     cout<<"rows = "<<row<<endl;
     cout<<"cols = "<<col<<endl;
 
     const int mat_sz = row * col;
     
+    VectorXd VecDiff(3);
+    double diff;
+
     Wij = SparseMatrix<double>(mat_sz, mat_sz);
     const int sp_rsv_row = 9;
     Wij.reserve(VectorXi::Constant(mat_sz, sp_rsv_row));
@@ -83,7 +94,7 @@ void Engine::implement_Wij()
 
 
     int rowPi,colPi,rowPj,colPj,indexJ;
-    float beta(1),sigma, smallCst(10^(-6));                      //Change later for float and find a solution for the square in the equation
+    float beta(0.00001),sigma, smallCst(10^(-6));                      //Change later for float and find a solution for the square in the equation
 
     for(int i = 0; i < row*col; i++)
     {
@@ -92,7 +103,7 @@ void Engine::implement_Wij()
         colPi=i%col;
 
         //sigma = maxInfNormInNeighood(I, rowPi, colPi);        //Still some pbm in this function
-        sigma = 1;
+        sigma = 0.1;
 
         for(int j = 0; j<9; j++)
         {
@@ -108,7 +119,12 @@ void Engine::implement_Wij()
 
             else
             {
-                wij = exp((-beta*(I(rowPi,colPi)-I(rowPj,colPj))*(I(rowPi,colPi)-I(rowPj,colPj)))/(sigma)) ; //change for Infinity norm if RGB image
+                VecDiff(0) = Ib(rowPi,colPi)-Ib(rowPj,colPj);
+                VecDiff(1) = Ib(rowPi,colPi)-Ib(rowPj,colPj);
+                VecDiff(2) = Ib(rowPi,colPi)-Ib(rowPj,colPj);
+                diff = VecDiff.lpNorm<Infinity>();
+                wij = exp((-beta*diff*diff)/(sigma)) ;
+                //wij = exp((-beta*(I(rowPi,colPi)-I(rowPj,colPj))*(I(rowPi,colPi)-I(rowPj,colPj)))/(sigma)) ; //change for Infinity norm if RGB image
                 Wij.insert(i,indexJ) = wij;
                 summ+=wij;
             }                                                                     //m.lpNorm<Infinity>()
@@ -181,18 +197,19 @@ void Engine::implement_X()
     solver.analyzePattern(A);
     solver.factorize(A);
     X = solver.solve(b);*/
-    xMatrix = MatrixXd(I.rows(), I.cols());
+    xMatrix = MatrixXd(Ib.rows(), Ib.cols());
 
-    for(int i = 0; i < I.rows(); i++)
+    for(int i = 0; i < Ib.rows(); i++)
     {
-        for(int j = 0; j < I.cols(); j++)
+        for(int j = 0; j < Ib.cols(); j++)
         {
-            xMatrix(i,j)=X(i*I.cols()+j);
+            xMatrix(i,j)=X(i*Ib.cols()+j);
         }
     }
 
-    cout<<"Time : "<<t<<endl;
-    cout<<"Clock per sec : "<<(float)t/CLOCKS_PER_SEC<<endl;
+    t=clock()-t;
+    cout<<"Ticks : "<<t<<endl;
+    cout<<"Duration : "<<(float)t/CLOCKS_PER_SEC<<" sec"<<endl;
     cout<<"X : OK!"<<endl;
     cout<<"Size of X: "<<X.rows()<<endl;
     //cout<<X<<endl;
@@ -216,10 +233,10 @@ Mat &Engine::get_seg_image()
 {
 
     Mat mask = seg_image > 50;
-    grayI.convertTo(grayI, CV_8U, 255);
-    grayI.setTo(0,mask);
+    //grayI.convertTo(grayI, CV_8U, 255);
+    Icv.setTo(0,mask);
 
-    return grayI;
+    return Icv;
 }
 
 

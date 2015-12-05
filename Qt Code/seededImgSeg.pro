@@ -15,13 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     imglabel.cpp \
-    engine.cpp \
-    utilities.cpp
+    utilities.cpp \
+    engine.cpp
 
 HEADERS  += mainwindow.h \
     imglabel.h \
-    engine.h \
-    utilities.h
+    utilities.h \
+    engine.h
 
 FORMS    += mainwindow.ui
 

@@ -43,8 +43,11 @@ public:
 
 private:
     QString picturePath;
-    MatrixXd I;
-    Mat grayI;
+    MatrixXd Ib;
+    MatrixXd Ig;
+    MatrixXd Ir;
+    //Mat grayI;
+    Mat Icv;
     QPixmap pixmap_b;
     MatrixXd bMatrix;
     VectorXd b;

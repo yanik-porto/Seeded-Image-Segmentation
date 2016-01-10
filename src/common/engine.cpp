@@ -1,7 +1,23 @@
 #include "engine.h"
 
-Engine::Engine()
+//-----------------------------------------------------------------------------
+// Constructors and destructors
+//-----------------------------------------------------------------------------
+
+Engine::Engine():
+    mat_sz(0),
+    img_r(0),
+    img_c(0)
 {
+}
+
+Engine::Engine(const QString &filename):
+    mat_sz(0),
+    img_r(0),
+    img_c(0)
+{
+    picturePath=filename;
+
 }
 
 Engine::~Engine()
@@ -9,40 +25,64 @@ Engine::~Engine()
 
 }
 
-void Engine::set_Pixmap_b(const QPixmap &pixmap)
+//-----------------------------------------------------------------------------
+// Public functions
+//-----------------------------------------------------------------------------
+
+void Engine::set_picturePath(const QString &filename)
 {
-    pixmap_b=pixmap;
+    picturePath = filename;
 }
 
-void Engine::set_picturePath(const QString filename)
+Mat &Engine::get_seg_image(const QString &filename)
 {
-    picturePath=filename;
+    splitRGBlayers();
+    pixmapSeedstoVector(filename);
+    setUpGraphWeightAndSum();
+    checkIfInSeedsOrNot();
+    implement_L();
+    solveEnergyFunction();
+    keepOnlyForeground();
+
+    return Icv;
 }
 
-void Engine::implement_I()
+//-----------------------------------------------------------------------------
+// Private functions
+//-----------------------------------------------------------------------------
+
+
+void Engine::splitRGBlayers()
 {
-    //Mat matImage = imread(picturePath.toStdString());
-    //grayI = Mat(matImage.size(), CV_8U);
-    //cv::cvtColor(matImage,grayI,CV_BGR2GRAY);
-    //grayI.convertTo(grayI,CV_32F,1/255.0);         //Change to CV_32FC3 for color image
-
-    //cv2eigen(grayI,I);
-
+    /**
+     * Read the image into OpenCV matrix, split each layer and
+     * convert them in Eigen Matrices.
+     */
     Icv = imread(picturePath.toStdString(),CV_LOAD_IMAGE_COLOR);
-    Mat bgr[3];
-    split(Icv,bgr);
-    cv2eigen(bgr[0],Ib);
-    cv2eigen(bgr[1],Ig);
-    cv2eigen(bgr[2],Ir);
-    //cout<<I<<endl;
-    cout<<"Size of I: "<<Ib.rows()<< " " <<Ib.cols()<<endl;
 
-    cout<<"I:OK"<<endl;
+    Mat bgr[3];
+    split(Icv, bgr);
+    cv2eigen(bgr[0], Ib);
+    cv2eigen(bgr[1], Ig);
+    cv2eigen(bgr[2], Ir);
+
+    /**
+     * Update the sizes of the image
+     */
+
+    img_r = Ib.rows();
+    img_c = Ib.cols();
+    mat_sz = img_r * img_c;
 }
 
-void Engine::implement_b()
+void Engine::pixmapSeedstoVector(const QString &filename)
 {
-    Mat matDrawing = imread("extPix.png");
+    /**
+     * Read the drawing of the seeds, convert it to gray image and to
+     * row*column vector. Values of the seeds are now 76 and 25 (values of blue and red in gray level)
+     */
+
+    Mat matDrawing = imread(filename.toStdString());
 
     //Grayscale matrix
     Mat bcv(matDrawing.size(), CV_8U);
@@ -53,32 +93,18 @@ void Engine::implement_b()
     //size_image = bcv.size();
     cv2eigen(bcv,bMatrix);
 
-    int row = bMatrix.rows();
-    int col = bMatrix.cols();
-    b = VectorXd(row * col);
-
-    for(int i = 0; i < row; i++)
-    {
-        for(int j = 0; j < col; j++)
-        {
-            b[i*col + j] = bMatrix(i, j);
-        }
-    }
-
-    //cout<<"b = "<<b<<endl;
-    cout<<"b:OK"<<endl;
+    //Convert matrix of seeds into vectors
+    b=Matrix2Vector(bMatrix);
 
 }
 
-void Engine::implement_Wij()
+void Engine::setUpGraphWeightAndSum()
 {
-    const int row = Ib.rows();
-    const int col = Ib.cols();
-    cout<<"rows = "<<row<<endl;
-    cout<<"cols = "<<col<<endl;
+    /**
+     * Read the image into OpenCV matrix, split each layer and
+     *
+     */
 
-    const int mat_sz = row * col;
-    
     VectorXd VecDiff(3);
     double diff;
 
@@ -86,157 +112,108 @@ void Engine::implement_Wij()
     const int sp_rsv_row = 9;
     Wij.reserve(VectorXi::Constant(mat_sz, sp_rsv_row));
 
-    //const int mat_sz = Wij.rows();
     D = SparseMatrix<double>(mat_sz, mat_sz);
     D.reserve(VectorXi::Constant(mat_sz, 1));
     double summ(0), wij(0);
 
+    int rowPi, colPi, rowPj, colPj, indexJ;
+    float beta(0.0001), sigma;
 
-
-    int rowPi,colPi,rowPj,colPj,indexJ;
-    float beta(0.00001),sigma, smallCst(10^(-6));                      //Change later for float and find a solution for the square in the equation
-
-    for(int i = 0; i < row*col; i++)
+    for(int i = 0; i < mat_sz; i++)
     {
-        summ=0;
-        rowPi=i/col;
-        colPi=i%col;
+        summ = 0;
+        rowPi = i/img_c;
+        colPi = i%img_c;
 
         //sigma = maxInfNormInNeighood(I, rowPi, colPi);        //Still some pbm in this function
         sigma = 0.1;
 
         for(int j = 0; j<9; j++)
         {
-
-
             rowPj = rowPi + j / 3 - 1;
-            colPj= colPi + j % 3 - 1;
+            colPj = colPi + j % 3 - 1;
 
-            indexJ = (rowPj * col) + colPj;
+            indexJ = (rowPj * img_c) + colPj;
 
-            if(rowPj<0 || rowPj>=row || colPj<0 || colPj>=col || (rowPj==rowPi && colPj==colPi))
+            if(rowPj<0 || rowPj>=img_r || colPj<0 || colPj>=img_c || (rowPj==rowPi && colPj==colPi))
             {}
 
             else
             {
                 VecDiff(0) = Ib(rowPi,colPi)-Ib(rowPj,colPj);
-                VecDiff(1) = Ib(rowPi,colPi)-Ib(rowPj,colPj);
-                VecDiff(2) = Ib(rowPi,colPi)-Ib(rowPj,colPj);
+                VecDiff(1) = Ig(rowPi,colPi)-Ig(rowPj,colPj);
+                VecDiff(2) = Ir(rowPi,colPi)-Ir(rowPj,colPj);
                 diff = VecDiff.lpNorm<Infinity>();
                 wij = exp((-beta*diff*diff)/(sigma)) ;
-                //wij = exp((-beta*(I(rowPi,colPi)-I(rowPj,colPj))*(I(rowPi,colPi)-I(rowPj,colPj)))/(sigma)) ; //change for Infinity norm if RGB image
                 Wij.insert(i,indexJ) = wij;
-                summ+=wij;
-            }                                                                     //m.lpNorm<Infinity>()
-
+                summ += wij;
+            }
         }
 
         D.insert(i,i) = summ;
 
     }
-    
-    cout<<"Wij & D : OK"<<endl;
-
 }
 
-void Engine::implement_Is()
+void Engine::checkIfInSeedsOrNot()
 {
-    const int mat_sz = bMatrix.rows()*bMatrix.cols();
-    Is=SparseMatrix<double>(mat_sz,mat_sz);
+    Is = SparseMatrix<double>(mat_sz,mat_sz);
     Is.reserve(VectorXi::Constant(mat_sz,1));
 
-    for(int i=0; i < bMatrix.rows(); i++)
+    for(int i=0; i < img_r; i++)
     {
-        for(int j=0; j < bMatrix.cols(); j++)
+        for(int j=0; j < img_c; j++)
         {
             if(bMatrix(i,j) != 0)
             {
-                Is.insert((i*bMatrix.cols())+j,(i*bMatrix.cols())+j)=1;
+                Is.insert((i*img_c)+j,(i*img_c)+j)=1;
             }
 
         }
     }
-    
-    cout<<"Is:OK"<<endl;
 
 }
 
 void Engine::implement_L()
 {
-    const int mat_sz = Wij.rows();
-    L=SparseMatrix<double>(Wij.rows(), Wij.cols());
+
+    L = SparseMatrix<double>(mat_sz, mat_sz);
     L.reserve(VectorXi::Constant(mat_sz, 9));
-    L=D-Wij;
-    
-    cout<<"L:OK"<<endl;
+    L = D-Wij;
+
 }
 
-void Engine::implement_X()
+void Engine::solveEnergyFunction()
 {
     clock_t t;
     t=clock();
     typedef Eigen::SparseMatrix<double> SparseMatrixType;
-    const int mat_sz = Is.rows();
     A = SparseMatrix<double>(mat_sz, mat_sz);
     A.reserve(VectorXi::Constant(mat_sz, 9));
 
     A = (Is + L * L);
     SimplicialLDLT<SparseMatrixType> sparseSolver(A);
-    X=sparseSolver.solve(b);
-    //cout<<X<<endl;
-    /*if(sparseSolver.info() != Eigen::Success)
-      {
-        throw std::runtime_error("Decomposition failed!");
-      }*/
+    X = sparseSolver.solve(b);
 
-    /*Eigen::BiCGSTAB<SparseMatrixType >  BCGST;
-    BCGST.compute(A);
-    X = BCGST.solve(b);*/
-
-    /*SparseLU<SparseMatrixType> solver;
-    solver.analyzePattern(A);
-    solver.factorize(A);
-    X = solver.solve(b);*/
-    xMatrix = MatrixXd(Ib.rows(), Ib.cols());
-
-    for(int i = 0; i < Ib.rows(); i++)
-    {
-        for(int j = 0; j < Ib.cols(); j++)
-        {
-            xMatrix(i,j)=X(i*Ib.cols()+j);
-        }
-    }
-
+    xMatrix = Vector2Matrix(X, img_r, img_c);
     t=clock()-t;
-    cout<<"Ticks : "<<t<<endl;
-    cout<<"Duration : "<<(float)t/CLOCKS_PER_SEC<<" sec"<<endl;
-    cout<<"X : OK!"<<endl;
-    cout<<"Size of X: "<<X.rows()<<endl;
-    //cout<<X<<endl;
+    cout<<"Duration : "<<(float)t/(CLOCKS_PER_SEC*60)<<" min"<<endl;
+
 }
 
-void Engine::convert_X_to_image()
+void Engine::keepOnlyForeground()
 {
 
     seg_image = Mat(xMatrix.rows(), xMatrix.cols(), CV_8U);
-    //Mat seg_image1(xMatrix.rows(), xMatrix.cols(), CV_8U);
 
-    eigen2cv(xMatrix,seg_image);
-
+    eigen2cv(xMatrix, seg_image);
 
     seg_image.convertTo(seg_image,CV_8U);
 
-
-}
-
-Mat &Engine::get_seg_image()
-{
-
     Mat mask = seg_image > 50;
-    //grayI.convertTo(grayI, CV_8U, 255);
-    Icv.setTo(0,mask);
 
-    return Icv;
+    Icv.setTo(0,mask);
 }
+
 
 

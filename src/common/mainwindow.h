@@ -41,6 +41,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Engine matrixEngine;
+    Mat final_image;
 };
 
 #endif // MAINWINDOW_H

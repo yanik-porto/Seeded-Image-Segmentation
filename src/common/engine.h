@@ -2,6 +2,12 @@
 #define ENGINE_H
 #define EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET
 
+/**
+ * The Engine class receives the image input in the gui and the drawn pixmap
+ * and apply mathematics in order to output the segmented image
+ */
+
+
 #include <QPixmap>
 #include <iostream>
 #include "utilities.h"
@@ -11,6 +17,7 @@
 #include <opencv2/core/eigen.hpp>
 #include <opencv/cv.h>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 
 #include "Eigen/Dense"
 #include "Eigen/Core"
@@ -26,42 +33,129 @@ class Engine
 {
 public:
     Engine();
+    Engine(const QString &filename);
     ~Engine();
 
-    void set_Pixmap_b(const QPixmap &);
-    void set_picturePath(const QString filename);
-    void implement_I();
-    void implement_b();
-    void implement_Wij();
-    void implement_Is();
-    void implement_L();
-    void implement_X();
-    void convert_X_to_image();
-    Mat &get_seg_image();
+    /**
+     * Main function where all functions are called
+     */
+    Mat &get_seg_image(const QString &filename);
+
+    /**
+     * Mutators
+     */
+    void set_picturePath(const QString &filename);
+
+
+
+
 
 
 
 private:
+    /**
+     * Split the different layers of the image
+     * and store them in three eigen matrix
+     */
+    void splitRGBlayers();
+
+    /**
+     * Read pixmap of the seeds and convert it to a row vector
+     */
+    void pixmapSeedstoVector(const QString &filename);
+
+    /**
+     * Set up the graph weights and store them in a Sparse matrix
+     * and deliver also a diagonal Sparse Matrix with the sum of the weigths in each row
+     */
+    void setUpGraphWeightAndSum();
+
+    /**
+     * Implement the diagonal sparse matrix with ones, if the pixel belongs to the Background
+     *  or the Foreground, and zeros otherwise.
+     */
+    void checkIfInSeedsOrNot();
+
+    /**
+     * Implement the matrix corresponding to sum of the weights minus the weights
+     */
+    void implement_L();
+
+    /**
+     * Solve the Energy functional by minimising using Cholesky factorization algorithm
+     */
+    void solveEnergyFunction();
+
+    /**
+     * keep only the foreground thanks to a given threshold and the solution of the equation
+     */
+    void keepOnlyForeground();
+
+
+    /**
+     * Path of the image to segment
+     */
     QString picturePath;
+
+    /**
+     * Sizes of the image
+     */
+    int mat_sz;
+    int img_r;
+    int img_c;
+
+    /**
+     * Three layers of the color image
+     */
     MatrixXd Ib;
     MatrixXd Ig;
     MatrixXd Ir;
-    //Mat grayI;
-    Mat Icv;
+
+    /**
+     * All elements which help to convert seeds pixmap to vector
+     */
     QPixmap pixmap_b;
     MatrixXd bMatrix;
     VectorXd b;
+
+    /**
+     * Sparse matrix storing the weights
+     */
     SparseMatrix<double> Wij;
+
+    /**
+     * All sparse matrices minimizing the Energy functional
+     */
     SparseMatrix<double> D;
     SparseMatrix<double> Is;
     SparseMatrix<double> L;
-    VectorXd X;
+
+    /**
+     * Sparse matrix representing the linear system
+     */
     SparseMatrix<double> A;
+
+    /**
+     * Vector storing the solution of the minimization
+     */
+    VectorXd X;
+
+    /**
+     * Solution vector converted into matrix
+     */
     MatrixXd xMatrix;
+
+    /**
+     * OpenCV matrix of the solution
+     */
     Mat seg_image;
 
+    /**
+     * OpenCV matrix embedding the original image
+     * on which we remove the backgroud later on
+     */
+    Mat Icv;
 
-    //Size size_image;
 };
 
 #endif // ENGINE_H

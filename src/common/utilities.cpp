@@ -5,6 +5,42 @@
 // Functions
 //-----------------------------------------------------------------------------
 
+
+
+VectorXd Matrix2Vector(MatrixXd M)
+{
+    int row = M.rows();
+    int col = M.cols();
+    VectorXd V(row * col);
+
+    for(int i = 0; i < row; i++)
+    {
+        for(int j = 0; j < col; j++)
+        {
+            V[i*col + j] = M(i, j);
+        }
+    }
+
+    return V;
+}
+
+MatrixXd Vector2Matrix(VectorXd V, int row, int col)
+{
+
+
+    MatrixXd M(row, col);
+
+    for(int i = 0; i < row; i++)
+    {
+        for(int j = 0; j < col; j++)
+        {
+            M(i,j) = V(i*col+j);
+        }
+    }
+
+    return M;
+}
+
 float maxInfNormInNeighood(MatrixXi M, int indexRow, int indexCol)
 {
     int rowPj, colPj;

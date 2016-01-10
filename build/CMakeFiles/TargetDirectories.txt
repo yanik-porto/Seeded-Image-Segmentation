@@ -1,0 +1,4 @@
+/home/yanik/qtProjects/seededImgSeg2/build/apps/CMakeFiles/main_automoc.dir
+/home/yanik/qtProjects/seededImgSeg2/build/common/CMakeFiles/common.dir
+/home/yanik/qtProjects/seededImgSeg2/build/common/CMakeFiles/common_automoc.dir
+/home/yanik/qtProjects/seededImgSeg2/build/apps/CMakeFiles/main.dir

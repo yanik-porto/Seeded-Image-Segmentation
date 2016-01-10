@@ -37,16 +37,10 @@ void MainWindow::on_pushButton_extract_clicked()
     ui->label_drawing->setGeometry(500,30,extPix.width(),extPix.height());
     ui->label_drawing->setPixmap(ui->label_image->getDrawing());
 
-    extPix.save("extPix.png","PNG");        //Change later
+    QString fileSeeds = "extPix.png";
+    extPix.save(fileSeeds,"PNG");
 
-    matrixEngine.implement_I();
-    matrixEngine.implement_b();
-    matrixEngine.implement_Wij();
-    matrixEngine.implement_Is();
-    matrixEngine.implement_L();
-    matrixEngine.implement_X();
-
-
+    final_image = matrixEngine.get_seg_image(fileSeeds);
 
 }
 
@@ -54,10 +48,6 @@ void MainWindow::on_pushButton_extract_clicked()
 
 void MainWindow::on_pushButton_Result_clicked()
 {
-
-    matrixEngine.convert_X_to_image();
-    Mat final_image = matrixEngine.get_seg_image();
-    //cout<<final_image<<endl;
     namedWindow("Result", WINDOW_AUTOSIZE );
     imshow("Result", final_image);
     QPixmap result(reinterpret_cast<const char *>(final_image.data));

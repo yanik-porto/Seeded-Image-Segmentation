@@ -33,5 +33,4 @@ INCLUDEPATH += /usr/local/include
 LIBS += -L"/usr/local/lib"
 LIBS += -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs
 
-RESOURCES += \
-    common/icons.qrc
+RESOURCES +=

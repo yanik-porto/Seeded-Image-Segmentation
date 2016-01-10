@@ -1,5 +1,5 @@
 include_directories(${PROJECT_SOURCE_DIR}/)
-#include_directories("../common")
+include_directories("../common")
 
 include_directories(${external_includes})
 #include_directories( ${OpenCV_INCLUDE_DIRS} )
@@ -14,9 +14,9 @@ foreach(app ${app_programs})
                           common
                           ${external_libs}
 							Qt4::QtGui
-							Qt4::QtBus
+							#Qt4::QtBus
 							${QT_LIBRARIES}
-							Qt4::QtWidgets
+							${OpenCV_LIBS}
 							)
 	#target_link_libraries(seededImgSeg ${QT_LIBRARIES})
 #Qt4::QtWidgets

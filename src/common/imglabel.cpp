@@ -18,7 +18,6 @@ imgLabel::imgLabel(const QString &filename, QWidget *parent):
     photo=new QPixmap(filename);
     this->setPixmap(*photo);
     drawing=new QPixmap(photo->size());
-    //drawing.scaled(this->size());
     drawing->fill(Qt::black);
 }
 
@@ -38,12 +37,9 @@ void imgLabel::setPhoto(const QString &filename)
         //delete drawing;
     }
 
-    //this->setGeometry(this->x(),this->y(),0,0);
     photo=new QPixmap(filename);
-    //photo->scaled(this->size(),Qt::KeepAspectRatio);
     this->setGeometry(this->x(),this->y(),photo->width(),photo->height());
     this->setPixmap(*photo);
-    //this->setGeometry(30,30,photo->width(),photo->height());
 
     drawing=new QPixmap(photo->size());
     cout<<photo->width()<<"   "<<photo->height()<<endl;
@@ -85,7 +81,6 @@ void imgLabel::mouseMoveEvent(QMouseEvent *event)
     if(drawEnabled)
     {
         p2=event->pos();
-        cout<<"x:"<<p2.x()<<"y:"<<p2.y()<<endl;
         update();
     }
 

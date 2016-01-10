@@ -13,7 +13,7 @@ add_library(common STATIC
 target_link_libraries(common
 					${external_libs}
 					${QT_LIBRARIES}
-					Qt4::QtWidgets)
+)
 
 #SET(seededImgSeg_SOURCES main.cpp mainwindow.cpp engine.cpp imglabel.cpp utilities.cpp)
 #SET(seededImgSeg_HEADERS mainwindow.h engine.h imglabel.h utilities.h)

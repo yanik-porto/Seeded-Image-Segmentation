@@ -81,7 +81,7 @@
           <string>Load</string>
          </property>
          <property name="icon">
-          <iconset resource="icons.qrc">
+          <iconset>
            <normaloff>:/MyIcons/png/photos13.png</normaloff>:/MyIcons/png/photos13.png</iconset>
          </property>
         </widget>
@@ -107,7 +107,7 @@
           <string>Draw</string>
          </property>
          <property name="icon">
-          <iconset resource="icons.qrc">
+          <iconset>
            <normaloff>:/MyIcons/png/paint86.png</normaloff>:/MyIcons/png/paint86.png</iconset>
          </property>
          <property name="checkable">
@@ -133,7 +133,7 @@
           <string>extract</string>
          </property>
          <property name="icon">
-          <iconset resource="icons.qrc">
+          <iconset>
            <normaloff>:/MyIcons/png/photo24.png</normaloff>:/MyIcons/png/photo24.png</iconset>
          </property>
         </widget>
@@ -172,7 +172,7 @@
      <x>0</x>
      <y>0</y>
      <width>779</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
@@ -191,11 +191,9 @@
   <customwidget>
    <class>imgLabel</class>
    <extends>QLabel</extends>
-   <header>imglabel.h</header>
+   <header>common/imglabel.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="icons.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

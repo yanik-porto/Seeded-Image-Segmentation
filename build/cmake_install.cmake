@@ -1,4 +1,4 @@
-# Install script for directory: /home/yanik/qtProjects/seededImgSeg2/src
+# Install script for directory: /home/yanik/Desktop/seededImgSegGUI/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yanik/qtProjects/seededImgSeg2/build/common/cmake_install.cmake")
-  include("/home/yanik/qtProjects/seededImgSeg2/build/apps/cmake_install.cmake")
+  include("/home/yanik/Desktop/seededImgSegGUI/build/common/cmake_install.cmake")
+  include("/home/yanik/Desktop/seededImgSegGUI/build/apps/cmake_install.cmake")
+  include("/home/yanik/Desktop/seededImgSegGUI/build/tests/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +48,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yanik/qtProjects/seededImgSeg2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/yanik/Desktop/seededImgSegGUI/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

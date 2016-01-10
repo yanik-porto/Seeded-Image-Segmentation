@@ -1,4 +1,4 @@
-# Install script for directory: /home/yanik/qtProjects/seededImgSeg2/src/apps
+# Install script for directory: /home/yanik/Desktop/seededImgSegGUI/src/apps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

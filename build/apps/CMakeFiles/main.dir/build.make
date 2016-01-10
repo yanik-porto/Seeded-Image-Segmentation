@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yanik/qtProjects/seededImgSeg2/src
+CMAKE_SOURCE_DIR = /home/yanik/Desktop/seededImgSegGUI/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yanik/qtProjects/seededImgSeg2/build
+CMAKE_BINARY_DIR = /home/yanik/Desktop/seededImgSegGUI/build
 
 # Include any dependencies generated for this target.
 include apps/CMakeFiles/main.dir/depend.make
@@ -58,17 +58,17 @@ include apps/CMakeFiles/main.dir/progress.make
 include apps/CMakeFiles/main.dir/flags.make
 
 apps/CMakeFiles/main.dir/main.cpp.o: apps/CMakeFiles/main.dir/flags.make
-apps/CMakeFiles/main.dir/main.cpp.o: /home/yanik/qtProjects/seededImgSeg2/src/apps/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/CMakeFiles/main.dir/main.cpp.o"
-	cd /home/yanik/qtProjects/seededImgSeg2/build/apps && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/apps/main.cpp
+apps/CMakeFiles/main.dir/main.cpp.o: /home/yanik/Desktop/seededImgSegGUI/src/apps/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object apps/CMakeFiles/main.dir/main.cpp.o"
+	cd /home/yanik/Desktop/seededImgSegGUI/build/apps && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/apps/main.cpp
 
 apps/CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	cd /home/yanik/qtProjects/seededImgSeg2/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanik/qtProjects/seededImgSeg2/src/apps/main.cpp > CMakeFiles/main.dir/main.cpp.i
+	cd /home/yanik/Desktop/seededImgSegGUI/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanik/Desktop/seededImgSegGUI/src/apps/main.cpp > CMakeFiles/main.dir/main.cpp.i
 
 apps/CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	cd /home/yanik/qtProjects/seededImgSeg2/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanik/qtProjects/seededImgSeg2/src/apps/main.cpp -o CMakeFiles/main.dir/main.cpp.s
+	cd /home/yanik/Desktop/seededImgSegGUI/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanik/Desktop/seededImgSegGUI/src/apps/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
 apps/CMakeFiles/main.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ apps/CMakeFiles/main.dir/main.cpp.o.provides.build: apps/CMakeFiles/main.dir/mai
 
 apps/CMakeFiles/main.dir/main_automoc.cpp.o: apps/CMakeFiles/main.dir/flags.make
 apps/CMakeFiles/main.dir/main_automoc.cpp.o: apps/main_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object apps/CMakeFiles/main.dir/main_automoc.cpp.o"
-	cd /home/yanik/qtProjects/seededImgSeg2/build/apps && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main_automoc.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/build/apps/main_automoc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object apps/CMakeFiles/main.dir/main_automoc.cpp.o"
+	cd /home/yanik/Desktop/seededImgSegGUI/build/apps && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main_automoc.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/build/apps/main_automoc.cpp
 
 apps/CMakeFiles/main.dir/main_automoc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main_automoc.cpp.i"
-	cd /home/yanik/qtProjects/seededImgSeg2/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanik/qtProjects/seededImgSeg2/build/apps/main_automoc.cpp > CMakeFiles/main.dir/main_automoc.cpp.i
+	cd /home/yanik/Desktop/seededImgSegGUI/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanik/Desktop/seededImgSegGUI/build/apps/main_automoc.cpp > CMakeFiles/main.dir/main_automoc.cpp.i
 
 apps/CMakeFiles/main.dir/main_automoc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main_automoc.cpp.s"
-	cd /home/yanik/qtProjects/seededImgSeg2/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanik/qtProjects/seededImgSeg2/build/apps/main_automoc.cpp -o CMakeFiles/main.dir/main_automoc.cpp.s
+	cd /home/yanik/Desktop/seededImgSegGUI/build/apps && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanik/Desktop/seededImgSegGUI/build/apps/main_automoc.cpp -o CMakeFiles/main.dir/main_automoc.cpp.s
 
 apps/CMakeFiles/main.dir/main_automoc.cpp.o.requires:
 
@@ -113,26 +113,26 @@ main_OBJECTS = \
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-/home/yanik/qtProjects/seededImgSeg2/bin/main: apps/CMakeFiles/main.dir/main.cpp.o
-/home/yanik/qtProjects/seededImgSeg2/bin/main: apps/CMakeFiles/main.dir/main_automoc.cpp.o
-/home/yanik/qtProjects/seededImgSeg2/bin/main: apps/CMakeFiles/main.dir/build.make
-/home/yanik/qtProjects/seededImgSeg2/bin/main: common/libcommon.a
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/lib/x86_64-linux-gnu/libQtGui.so
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/lib/x86_64-linux-gnu/libQtGui.so
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/lib/x86_64-linux-gnu/libQtCore.so
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/local/lib/libopencv_highgui.so.3.0.0
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/local/lib/libopencv_imgcodecs.so.3.0.0
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/local/lib/libopencv_imgproc.so.3.0.0
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/local/lib/libopencv_core.so.3.0.0
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/local/lib/libopencv_hal.a
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/local/share/OpenCV/3rdparty/lib/libippicv.a
-/home/yanik/qtProjects/seededImgSeg2/bin/main: /usr/lib/x86_64-linux-gnu/libQtCore.so
-/home/yanik/qtProjects/seededImgSeg2/bin/main: apps/CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/yanik/qtProjects/seededImgSeg2/bin/main"
-	cd /home/yanik/qtProjects/seededImgSeg2/build/apps && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
+/home/yanik/Desktop/seededImgSegGUI/bin/main: apps/CMakeFiles/main.dir/main.cpp.o
+/home/yanik/Desktop/seededImgSegGUI/bin/main: apps/CMakeFiles/main.dir/main_automoc.cpp.o
+/home/yanik/Desktop/seededImgSegGUI/bin/main: apps/CMakeFiles/main.dir/build.make
+/home/yanik/Desktop/seededImgSegGUI/bin/main: common/libcommon.a
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/lib/x86_64-linux-gnu/libQtGui.so
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/lib/x86_64-linux-gnu/libQtGui.so
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/lib/x86_64-linux-gnu/libQtCore.so
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/local/lib/libopencv_highgui.so.3.0.0
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/local/lib/libopencv_imgcodecs.so.3.0.0
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/local/lib/libopencv_imgproc.so.3.0.0
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/local/lib/libopencv_core.so.3.0.0
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/local/lib/libopencv_hal.a
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/local/share/OpenCV/3rdparty/lib/libippicv.a
+/home/yanik/Desktop/seededImgSegGUI/bin/main: /usr/lib/x86_64-linux-gnu/libQtCore.so
+/home/yanik/Desktop/seededImgSegGUI/bin/main: apps/CMakeFiles/main.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/yanik/Desktop/seededImgSegGUI/bin/main"
+	cd /home/yanik/Desktop/seededImgSegGUI/build/apps && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-apps/CMakeFiles/main.dir/build: /home/yanik/qtProjects/seededImgSeg2/bin/main
+apps/CMakeFiles/main.dir/build: /home/yanik/Desktop/seededImgSegGUI/bin/main
 
 .PHONY : apps/CMakeFiles/main.dir/build
 
@@ -142,10 +142,10 @@ apps/CMakeFiles/main.dir/requires: apps/CMakeFiles/main.dir/main_automoc.cpp.o.r
 .PHONY : apps/CMakeFiles/main.dir/requires
 
 apps/CMakeFiles/main.dir/clean:
-	cd /home/yanik/qtProjects/seededImgSeg2/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/main.dir/cmake_clean.cmake
+	cd /home/yanik/Desktop/seededImgSegGUI/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/main.dir/cmake_clean.cmake
 .PHONY : apps/CMakeFiles/main.dir/clean
 
 apps/CMakeFiles/main.dir/depend:
-	cd /home/yanik/qtProjects/seededImgSeg2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanik/qtProjects/seededImgSeg2/src /home/yanik/qtProjects/seededImgSeg2/src/apps /home/yanik/qtProjects/seededImgSeg2/build /home/yanik/qtProjects/seededImgSeg2/build/apps /home/yanik/qtProjects/seededImgSeg2/build/apps/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yanik/Desktop/seededImgSegGUI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanik/Desktop/seededImgSegGUI/src /home/yanik/Desktop/seededImgSegGUI/src/apps /home/yanik/Desktop/seededImgSegGUI/build /home/yanik/Desktop/seededImgSegGUI/build/apps /home/yanik/Desktop/seededImgSegGUI/build/apps/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : apps/CMakeFiles/main.dir/depend
 

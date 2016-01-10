@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "main_automoc.cpp"
   "CMakeFiles/main.dir/main.cpp.o"
   "CMakeFiles/main.dir/main_automoc.cpp.o"
-  "/home/yanik/qtProjects/seededImgSeg2/bin/main.pdb"
-  "/home/yanik/qtProjects/seededImgSeg2/bin/main"
+  "/home/yanik/Desktop/seededImgSegGUI/bin/main.pdb"
+  "/home/yanik/Desktop/seededImgSegGUI/bin/main"
 )
 
 # Per-language clean rules from dependency scanning.

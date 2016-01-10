@@ -5,8 +5,9 @@
 // Functions
 //-----------------------------------------------------------------------------
 
-
-
+/**
+ * Convert a matrix into row vector
+ */
 VectorXd Matrix2Vector(MatrixXd M)
 {
     int row = M.rows();
@@ -24,6 +25,10 @@ VectorXd Matrix2Vector(MatrixXd M)
     return V;
 }
 
+/**
+ * Convert a vector into matrix according the number of
+ * rows and columns
+ */
 MatrixXd Vector2Matrix(VectorXd V, int row, int col)
 {
 
@@ -41,6 +46,9 @@ MatrixXd Vector2Matrix(VectorXd V, int row, int col)
     return M;
 }
 
+/**
+ * Compute the max infinity norm between neighbots and the pixel for given pixel coordinates
+ */
 float maxInfNormInNeighood(MatrixXi M, int indexRow, int indexCol)
 {
     int rowPj, colPj;
@@ -56,12 +64,10 @@ float maxInfNormInNeighood(MatrixXi M, int indexRow, int indexCol)
         {}
         else
         {
-            infNorm = float(abs(M(indexRow, indexCol) - M(rowPj, colPj)));                //m.lpNorm<Infinity>()
+            infNorm = float(abs(M(indexRow, indexCol) - M(rowPj, colPj)));
 
             if(infNorm > maxInfNorm)
                 maxInfNorm = infNorm;
-
-            //qDebug()<<"maxinfNorm :"<<maxInfNorm;
         }
 
     }

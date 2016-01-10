@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yanik/qtProjects/seededImgSeg2/src/apps/main.cpp" "/home/yanik/qtProjects/seededImgSeg2/build/apps/CMakeFiles/main.dir/main.cpp.o"
-  "/home/yanik/qtProjects/seededImgSeg2/build/apps/main_automoc.cpp" "/home/yanik/qtProjects/seededImgSeg2/build/apps/CMakeFiles/main.dir/main_automoc.cpp.o"
+  "/home/yanik/Desktop/seededImgSegGUI/src/apps/main.cpp" "/home/yanik/Desktop/seededImgSegGUI/build/apps/CMakeFiles/main.dir/main.cpp.o"
+  "/home/yanik/Desktop/seededImgSegGUI/build/apps/main_automoc.cpp" "/home/yanik/Desktop/seededImgSegGUI/build/apps/CMakeFiles/main.dir/main_automoc.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,13 +19,13 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "apps"
-  "/home/yanik/qtProjects/seededImgSeg2/src/apps"
+  "/home/yanik/Desktop/seededImgSegGUI/src/apps"
   "/usr/include/qt4"
   "/usr/include/qt4/QtGui"
   "/usr/include/qt4/QtCore"
-  "/home/yanik/qtProjects/seededImgSeg2/src"
+  "/home/yanik/Desktop/seededImgSegGUI/src"
   "."
-  "/home/yanik/qtProjects/seededImgSeg2/src/apps/../common"
+  "/home/yanik/Desktop/seededImgSegGUI/src/apps/../common"
   "/usr/include/eigen3"
   "/usr/local/include/opencv"
   "/usr/local/include"
@@ -34,7 +34,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/yanik/qtProjects/seededImgSeg2/build/common/CMakeFiles/common.dir/DependInfo.cmake"
+  "/home/yanik/Desktop/seededImgSegGUI/build/common/CMakeFiles/common.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

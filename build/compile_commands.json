@@ -1,47 +1,67 @@
 [
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/common",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/common -I/home/yanik/qtProjects/seededImgSeg2/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/moc_mainwindow.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/common/moc_mainwindow.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/src/common/moc_mainwindow.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/common",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/common -I/home/yanik/Desktop/seededImgSegGUI/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/engine.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/common/engine.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/common/engine.cpp"
 },
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/common",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/common -I/home/yanik/qtProjects/seededImgSeg2/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/engine.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/common/engine.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/src/common/engine.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/common",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/common -I/home/yanik/Desktop/seededImgSegGUI/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/mainwindow.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/common/mainwindow.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/common/mainwindow.cpp"
 },
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/common",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/common -I/home/yanik/qtProjects/seededImgSeg2/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/moc_imglabel.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/common/moc_imglabel.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/src/common/moc_imglabel.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/common",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/common -I/home/yanik/Desktop/seededImgSegGUI/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/imglabel.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/common/imglabel.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/common/imglabel.cpp"
 },
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/common",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/common -I/home/yanik/qtProjects/seededImgSeg2/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/mainwindow.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/common/mainwindow.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/src/common/mainwindow.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/common",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/common -I/home/yanik/Desktop/seededImgSegGUI/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/utilities.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/common/utilities.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/common/utilities.cpp"
 },
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/common",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/common -I/home/yanik/qtProjects/seededImgSeg2/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/imglabel.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/common/imglabel.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/src/common/imglabel.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/common",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/common -I/home/yanik/Desktop/seededImgSegGUI/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/common_automoc.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/build/common/common_automoc.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/build/common/common_automoc.cpp"
 },
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/common",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/common -I/home/yanik/qtProjects/seededImgSeg2/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/utilities.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/common/utilities.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/src/common/utilities.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/apps",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/apps -I/home/yanik/Desktop/seededImgSegGUI/src/apps -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -I/home/yanik/Desktop/seededImgSegGUI/src/apps/../common -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include -isystem /usr/share/qt4/mkspecs/default  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/main.dir/main.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/apps/main.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/apps/main.cpp"
 },
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/common",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/common -I/home/yanik/qtProjects/seededImgSeg2/src/common -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/common.dir/common_automoc.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/common/common_automoc.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/src/common/common_automoc.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/apps",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/apps -I/home/yanik/Desktop/seededImgSegGUI/src/apps -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -I/home/yanik/Desktop/seededImgSegGUI/src/apps/../common -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include -isystem /usr/share/qt4/mkspecs/default  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/main.dir/main_automoc.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/build/apps/main_automoc.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/build/apps/main_automoc.cpp"
 },
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/apps",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/apps -I/home/yanik/qtProjects/seededImgSeg2/src/apps -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/home/yanik/qtProjects/seededImgSeg2/src/apps/../common -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include -isystem /usr/share/qt4/mkspecs/default  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/main.dir/main.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/src/apps/main.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/src/apps/main.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/tests",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/tests -I/home/yanik/Desktop/seededImgSegGUI/src/tests -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -isystem /usr/local/include -I/usr/include/eigen3 -I/usr/local/include/opencv  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/test_all.dir/tests_all.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/tests/tests_all.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/tests/tests_all.cpp"
 },
 {
-  "directory": "/home/yanik/qtProjects/seededImgSeg2/build/apps",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/qtProjects/seededImgSeg2/build/apps -I/home/yanik/qtProjects/seededImgSeg2/src/apps -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/qtProjects/seededImgSeg2/src -I/home/yanik/qtProjects/seededImgSeg2/build -I/home/yanik/qtProjects/seededImgSeg2/src/apps/../common -I/usr/include/eigen3 -I/usr/local/include/opencv -I/usr/local/include -isystem /usr/share/qt4/mkspecs/default  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/main.dir/main_automoc.cpp.o -c /home/yanik/qtProjects/seededImgSeg2/build/apps/main_automoc.cpp",
-  "file": "/home/yanik/qtProjects/seededImgSeg2/build/apps/main_automoc.cpp"
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/tests",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/tests -I/home/yanik/Desktop/seededImgSegGUI/src/tests -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -isystem /usr/local/include -I/usr/include/eigen3 -I/usr/local/include/opencv  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/test_all.dir/unit/common/test_utilities.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/tests/unit/common/test_utilities.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/tests/unit/common/test_utilities.cpp"
+},
+{
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/tests",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/tests -I/home/yanik/Desktop/seededImgSegGUI/src/tests -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -isystem /usr/local/include -I/usr/include/eigen3 -I/usr/local/include/opencv  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/test_all.dir/test_all_automoc.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/build/tests/test_all_automoc.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/build/tests/test_all_automoc.cpp"
+},
+{
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/tests",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/tests -I/home/yanik/Desktop/seededImgSegGUI/src/tests -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -isystem /usr/local/include -I/usr/include/eigen3 -I/usr/local/include/opencv  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/test_utilities.dir/tests_all.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/tests/tests_all.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/tests/tests_all.cpp"
+},
+{
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/tests",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/tests -I/home/yanik/Desktop/seededImgSegGUI/src/tests -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -isystem /usr/local/include -I/usr/include/eigen3 -I/usr/local/include/opencv  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/test_utilities.dir/unit/common/test_utilities.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/src/tests/unit/common/test_utilities.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/src/tests/unit/common/test_utilities.cpp"
+},
+{
+  "directory": "/home/yanik/Desktop/seededImgSegGUI/build/tests",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/home/yanik/Desktop/seededImgSegGUI/build/tests -I/home/yanik/Desktop/seededImgSegGUI/src/tests -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtCore -I/home/yanik/Desktop/seededImgSegGUI/src -I/home/yanik/Desktop/seededImgSegGUI/build -isystem /usr/local/include -I/usr/include/eigen3 -I/usr/local/include/opencv  -Wextra -Wall -Wno-delete-non-virtual-dtor -Werror=return-type -O3   -o CMakeFiles/test_utilities.dir/test_utilities_automoc.cpp.o -c /home/yanik/Desktop/seededImgSegGUI/build/tests/test_utilities_automoc.cpp",
+  "file": "/home/yanik/Desktop/seededImgSegGUI/build/tests/test_utilities_automoc.cpp"
 }
 ]

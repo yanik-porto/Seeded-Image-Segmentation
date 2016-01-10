@@ -39,7 +39,7 @@ public:
     /**
      * Main function where all functions are called
      */
-    Mat &get_seg_image(const QString &filename);
+    Mat &segment_image(const QString &fileNameSeeds, float beta);
 
     /**
      * Mutators
@@ -55,20 +55,20 @@ public:
 private:
     /**
      * Split the different layers of the image
-     * and store them in three eigen matrix
+     * and store them in three eigen matrices
      */
     void splitRGBlayers();
 
     /**
      * Read pixmap of the seeds and convert it to a row vector
      */
-    void pixmapSeedstoVector(const QString &filename);
+    void pixmapSeedstoVector(const QString &fileNameSeeds);
 
     /**
      * Set up the graph weights and store them in a Sparse matrix
      * and deliver also a diagonal Sparse Matrix with the sum of the weigths in each row
      */
-    void setUpGraphWeightAndSum();
+    void setUpGraphWeightAndSum(float beta);
 
     /**
      * Implement the diagonal sparse matrix with ones, if the pixel belongs to the Background
@@ -79,7 +79,7 @@ private:
     /**
      * Implement the matrix corresponding to sum of the weights minus the weights
      */
-    void implement_L();
+    void diffBetweenSumAndWeights();
 
     /**
      * Solve the Energy functional by minimising using Cholesky factorization algorithm

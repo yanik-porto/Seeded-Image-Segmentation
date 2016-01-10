@@ -1,4 +1,8 @@
-/home/yanik/qtProjects/seededImgSeg2/build/apps/CMakeFiles/main_automoc.dir
-/home/yanik/qtProjects/seededImgSeg2/build/common/CMakeFiles/common.dir
-/home/yanik/qtProjects/seededImgSeg2/build/common/CMakeFiles/common_automoc.dir
-/home/yanik/qtProjects/seededImgSeg2/build/apps/CMakeFiles/main.dir
+/home/yanik/Desktop/seededImgSegGUI/build/apps/CMakeFiles/main_automoc.dir
+/home/yanik/Desktop/seededImgSegGUI/build/common/CMakeFiles/common.dir
+/home/yanik/Desktop/seededImgSegGUI/build/common/CMakeFiles/common_automoc.dir
+/home/yanik/Desktop/seededImgSegGUI/build/tests/CMakeFiles/test_utilities_automoc.dir
+/home/yanik/Desktop/seededImgSegGUI/build/tests/CMakeFiles/test_all_automoc.dir
+/home/yanik/Desktop/seededImgSegGUI/build/tests/CMakeFiles/test_all.dir
+/home/yanik/Desktop/seededImgSegGUI/build/apps/CMakeFiles/main.dir
+/home/yanik/Desktop/seededImgSegGUI/build/tests/CMakeFiles/test_utilities.dir

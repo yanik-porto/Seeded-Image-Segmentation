@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yanik/qtProjects/seededImgSeg2/src
+CMAKE_SOURCE_DIR = /home/yanik/Desktop/seededImgSegGUI/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yanik/qtProjects/seededImgSeg2/build
+CMAKE_BINARY_DIR = /home/yanik/Desktop/seededImgSegGUI/build
 
 # Utility rule file for common_automoc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/yanik/qtProjects/seededImgSeg2/build
 include common/CMakeFiles/common_automoc.dir/progress.make
 
 common/CMakeFiles/common_automoc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc and uic for target common"
-	cd /home/yanik/qtProjects/seededImgSeg2/build/common && /usr/local/bin/cmake -E cmake_autogen /home/yanik/qtProjects/seededImgSeg2/build/common/CMakeFiles/common_automoc.dir/ RELEASE
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc and uic for target common"
+	cd /home/yanik/Desktop/seededImgSegGUI/build/common && /usr/local/bin/cmake -E cmake_autogen /home/yanik/Desktop/seededImgSegGUI/build/common/CMakeFiles/common_automoc.dir/ RELEASE
 
 common_automoc: common/CMakeFiles/common_automoc
 common_automoc: common/CMakeFiles/common_automoc.dir/build.make
@@ -68,10 +68,10 @@ common/CMakeFiles/common_automoc.dir/build: common_automoc
 .PHONY : common/CMakeFiles/common_automoc.dir/build
 
 common/CMakeFiles/common_automoc.dir/clean:
-	cd /home/yanik/qtProjects/seededImgSeg2/build/common && $(CMAKE_COMMAND) -P CMakeFiles/common_automoc.dir/cmake_clean.cmake
+	cd /home/yanik/Desktop/seededImgSegGUI/build/common && $(CMAKE_COMMAND) -P CMakeFiles/common_automoc.dir/cmake_clean.cmake
 .PHONY : common/CMakeFiles/common_automoc.dir/clean
 
 common/CMakeFiles/common_automoc.dir/depend:
-	cd /home/yanik/qtProjects/seededImgSeg2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanik/qtProjects/seededImgSeg2/src /home/yanik/qtProjects/seededImgSeg2/src/common /home/yanik/qtProjects/seededImgSeg2/build /home/yanik/qtProjects/seededImgSeg2/build/common /home/yanik/qtProjects/seededImgSeg2/build/common/CMakeFiles/common_automoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yanik/Desktop/seededImgSegGUI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanik/Desktop/seededImgSegGUI/src /home/yanik/Desktop/seededImgSegGUI/src/common /home/yanik/Desktop/seededImgSegGUI/build /home/yanik/Desktop/seededImgSegGUI/build/common /home/yanik/Desktop/seededImgSegGUI/build/common/CMakeFiles/common_automoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : common/CMakeFiles/common_automoc.dir/depend
 

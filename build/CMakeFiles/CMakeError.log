@@ -1,18 +1,18 @@
 Determining if the Q_WS_WIN exist failed with the following output:
-Change Dir: /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_94ab6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_94ab6.dir/build.make CMakeFiles/cmTC_94ab6.dir/build
-make[1]: Entering directory `/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_94ab6.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_94ab6.dir/CheckSymbolExists.cxx.o -c /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
-/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTC_94ab6.dir/CheckSymbolExists.cxx.o] Error 1
-make[1]: Leaving directory `/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp'
-make: *** [cmTC_94ab6/fast] Error 2
+Run Build Command:"/usr/bin/make" "cmTC_d4973/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d4973.dir/build.make CMakeFiles/cmTC_d4973.dir/build
+make[1]: Entering directory `/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d4973.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_d4973.dir/CheckSymbolExists.cxx.o -c /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTC_d4973.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_d4973/fast] Error 2
 
-File /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 
@@ -28,20 +28,20 @@ int main(int argc, char** argv)
 }
 
 Determining if the Q_WS_QWS exist failed with the following output:
-Change Dir: /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8dd0b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8dd0b.dir/build.make CMakeFiles/cmTC_8dd0b.dir/build
-make[1]: Entering directory `/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8dd0b.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_8dd0b.dir/CheckSymbolExists.cxx.o -c /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
-/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
-make[1]: Leaving directory `/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp'
-make[1]: *** [CMakeFiles/cmTC_8dd0b.dir/CheckSymbolExists.cxx.o] Error 1
-make: *** [cmTC_8dd0b/fast] Error 2
+Run Build Command:"/usr/bin/make" "cmTC_29b8c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_29b8c.dir/build.make CMakeFiles/cmTC_29b8c.dir/build
+make[1]: Entering directory `/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_29b8c.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_29b8c.dir/CheckSymbolExists.cxx.o -c /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTC_29b8c.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_29b8c/fast] Error 2
 
-File /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 
@@ -57,20 +57,20 @@ int main(int argc, char** argv)
 }
 
 Determining if the Q_WS_MAC exist failed with the following output:
-Change Dir: /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_79acb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_79acb.dir/build.make CMakeFiles/cmTC_79acb.dir/build
-make[1]: Entering directory `/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_79acb.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_79acb.dir/CheckSymbolExists.cxx.o -c /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
-/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
-make[1]: *** [CMakeFiles/cmTC_79acb.dir/CheckSymbolExists.cxx.o] Error 1
-make[1]: Leaving directory `/home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp'
-make: *** [cmTC_79acb/fast] Error 2
+Run Build Command:"/usr/bin/make" "cmTC_85f62/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85f62.dir/build.make CMakeFiles/cmTC_85f62.dir/build
+make[1]: Entering directory `/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_85f62.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4   -o CMakeFiles/cmTC_85f62.dir/CheckSymbolExists.cxx.o -c /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+make[1]: *** [CMakeFiles/cmTC_85f62.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_85f62/fast] Error 2
 
-File /home/yanik/qtProjects/seededImgSeg2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/yanik/Desktop/seededImgSegGUI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 

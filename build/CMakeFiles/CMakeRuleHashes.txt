@@ -1,3 +1,5 @@
 # Hashes of file build rules.
-ca6e24a13ada4af0b55f5aca4c4caede apps/CMakeFiles/main_automoc
-432ff117a40a2e47f855d5c64593eb6d common/CMakeFiles/common_automoc
+b46134dced35fc0270f9156c4877d35c apps/CMakeFiles/main_automoc
+5a223997822a2dc13867cd760e7739d1 common/CMakeFiles/common_automoc
+5847498090b868f18f6dcdd8660c89da tests/CMakeFiles/test_all_automoc
+d48b398467f03cc53b7b6ef3e8ddbdb1 tests/CMakeFiles/test_utilities_automoc
